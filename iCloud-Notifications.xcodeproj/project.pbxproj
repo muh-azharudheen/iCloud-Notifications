@@ -12,6 +12,8 @@
 		22CA8087203460B9002A4CAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CA8085203460B9002A4CAA /* Main.storyboard */; };
 		22CA8089203460B9002A4CAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CA8088203460B9002A4CAA /* Assets.xcassets */; };
 		22CA808C203460B9002A4CAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CA808A203460B9002A4CAA /* LaunchScreen.storyboard */; };
+		22CA8CD82034798D002A4CAA /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA8CD72034798D002A4CAA /* Notes.swift */; };
+		22CA8CDB20347B35002A4CAA /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA8CDA20347B35002A4CAA /* AlertService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		22CA8088203460B9002A4CAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22CA808B203460B9002A4CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22CA808D203460B9002A4CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22CA8CD72034798D002A4CAA /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		22CA8CDA20347B35002A4CAA /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,72 @@
 		22CA8080203460B9002A4CAA /* iCloud-Notifications */ = {
 			isa = PBXGroup;
 			children = (
-				22CA8081203460B9002A4CAA /* AppDelegate.swift */,
-				22CA8083203460B9002A4CAA /* ViewController.swift */,
-				22CA8085203460B9002A4CAA /* Main.storyboard */,
-				22CA8088203460B9002A4CAA /* Assets.xcassets */,
-				22CA808A203460B9002A4CAA /* LaunchScreen.storyboard */,
-				22CA808D203460B9002A4CAA /* Info.plist */,
+				22CA8CD6203478FE002A4CAA /* Utils */,
+				22CA8CD5203478F1002A4CAA /* StoryBoard */,
+				22CA8CD4203478A1002A4CAA /* AppDelegate */,
+				22CA8CD3203476D8002A4CAA /* Model */,
+				22CA8CD2203476D3002A4CAA /* View */,
+				22CA8CD1203476CC002A4CAA /* Controller */,
+				22CA8CD920347B14002A4CAA /* Service */,
 			);
 			path = "iCloud-Notifications";
+			sourceTree = "<group>";
+		};
+		22CA8CD1203476CC002A4CAA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22CA8083203460B9002A4CAA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22CA8CD2203476D3002A4CAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22CA8CD3203476D8002A4CAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22CA8CD72034798D002A4CAA /* Notes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22CA8CD4203478A1002A4CAA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				22CA8081203460B9002A4CAA /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		22CA8CD5203478F1002A4CAA /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				22CA808A203460B9002A4CAA /* LaunchScreen.storyboard */,
+				22CA8085203460B9002A4CAA /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		22CA8CD6203478FE002A4CAA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				22CA808D203460B9002A4CAA /* Info.plist */,
+				22CA8088203460B9002A4CAA /* Assets.xcassets */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		22CA8CD920347B14002A4CAA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				22CA8CDA20347B35002A4CAA /* AlertService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +200,8 @@
 			files = (
 				22CA8084203460B9002A4CAA /* ViewController.swift in Sources */,
 				22CA8082203460B9002A4CAA /* AppDelegate.swift in Sources */,
+				22CA8CDB20347B35002A4CAA /* AlertService.swift in Sources */,
+				22CA8CD82034798D002A4CAA /* Notes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +339,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "iCloud-Notifications/Info.plist";
+				DEVELOPMENT_TEAM = K53FCL976W;
+				INFOPLIST_FILE = "$(SRCROOT)/iCloud-Notifications/Utils/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.muhAzharudheen.iCloud-Notifications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +354,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "iCloud-Notifications/Info.plist";
+				DEVELOPMENT_TEAM = K53FCL976W;
+				INFOPLIST_FILE = "$(SRCROOT)/iCloud-Notifications/Utils/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.muhAzharudheen.iCloud-Notifications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
